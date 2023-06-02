@@ -1,0 +1,26 @@
+.warning{
+    height: 40px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    background-color: rgb(210, 91, 91);
+    font-size: 1.1rem;
+    color: white;
+    font-family: cursive;
+    padding: 5px;
+    border-radius: 5px;
+}
+.search-container{
+    text-align: center;
+    margin-top: 50px;
+
+}
+.search-container input{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+.search{
+    margin-left: -25px;
+}

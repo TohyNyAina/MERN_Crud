@@ -1,0 +1,76 @@
+import im from './png/plant.png'
+const list = [
+    {
+      id: 1,
+      nom: "Dalia",
+      categorie: "classique",
+      lumiere:2,
+      eau:3,
+      prix: 8000,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 2,
+      nom: "Rose",
+      categorie: "classique",
+      lumiere:2,
+      eau:3,
+      prix: 8000,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 3,
+      nom: "Vanille",
+      categorie: "exterieur",
+      prix: 10000,
+      lumiere:2,
+      eau:3,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 4,
+      nom: "inc",
+      categorie: "exterieur",
+      prix: 10000,
+      lumiere:2,
+      eau:3,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 5,
+      nom: "tournesol",
+      categorie: "plante grasse",
+      prix: 15000,
+      lumiere:2,
+      eau:3,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 6,
+      nom: "Afrodisiaque",
+      categorie: "plante grasse",
+      prix: 15000,
+      lumiere:2,
+      eau:3,
+      photo:im,
+      amount: 1,
+    },
+    {
+      id: 7,
+      nom: "tournesol",
+      categorie: "plante grasse",
+      prix: 25000,
+      lumiere:2,
+      eau:3,
+      photo:im,
+      amount: 1,
+    }
+    
+];
+
+export default list;

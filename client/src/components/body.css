@@ -1,0 +1,24 @@
+.logo{
+    margin-left: 1000px;
+}
+
+.plant{
+    margin-left: 40px;
+}
+
+.plant-content{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.plant-img{
+    width: 175px;
+    height: 175px;
+}
+
+.f-container{
+    color: white;
+    background-color: #3CB371;
+    height: 200px;
+}
