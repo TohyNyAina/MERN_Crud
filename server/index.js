@@ -1,19 +1,17 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-
-import userRoutes from "./src/routes/users.js";
-
+const express = require('express');
 const app = express();
-const port = 5000;
+const cors = require('cors');
+const port = 8000;
 
-app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin:'*'
+}));
 
-app.use("/", userRoutes);
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://127.0.0.1:27017/MERN");
 
-app.get("/", (req, res) => res.send("Hello From Express"));
-app.all("*", (req, res) => res.send("That route doesn't exist"));
+const post_route = require('./routes/postRoute');
+app.use('/api',post_route);
 
 app.listen(port, () => 
   console.log(`Server is listening on port: http://localhost:${port}`)  

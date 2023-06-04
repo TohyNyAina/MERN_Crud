@@ -1,50 +1,29 @@
-import React , {useState} from 'react';
-import Navbar from './components/Navbar';
-import Body from './components/body';
-import Cart from './components/Cart';
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './styles/body.css';
+import Header from './components/Header';
 
-const App = () => {
-	const [list , setList] = useState([]);
+import Home from './pages/Home';
+import Add from './pages/Add';
 
-	const handleClick = (item)=>{
-		let isPresent = false;
-		list.forEach((product)=>{
-			if (item.id === product.id)
-			isPresent = true;
-		})
-		
-		setList([...list, item]);
-	}
 
-	const handleChange = (item, d) =>{
-		let ind = -1;
-		list.forEach((data, index)=>{
-			if (data.id === item.id)
-				ind = index;
-		});
-		const tempArr = list;
-		tempArr[ind].amount += d;
-		
-		if (tempArr[ind].amount === 0)
-			tempArr[ind].amount = 1;
-		setList([...tempArr])
-	}
 
+function App() {
   return (
-	<React.Fragment>
-		
-		<Navbar/>
-		<Cart list={list} setList={setList} handleChange={handleChange} />
-		<Body handleClick={handleClick} />
+    <div className="App">
+      
+      <BrowserRouter>
+      
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/add' element={<Add/>} />
+        </Routes>
+      </BrowserRouter>
 
-
-			 
-		
-		
-	</React.Fragment>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
