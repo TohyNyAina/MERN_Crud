@@ -10,7 +10,7 @@ const UpdateModalComponent = (props) => {
         return invokeModal(!isShow);
     }
 
-    //form updatation data
+    //form updatation data.
     const [title, setTitle] = useState(props.title);
     const [date, setDate] = useState(props.date);
     const [id, setId] = useState(props.id);
